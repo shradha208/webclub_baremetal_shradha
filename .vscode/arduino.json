@@ -1,0 +1,5 @@
+{
+    "sketch": "ppg_sim/ppg_sim.ino",
+    "board": "esp32:esp32:esp32",
+    "output": "build"
+}
