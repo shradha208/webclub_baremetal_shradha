@@ -1,4 +1,5 @@
 [wokwi]
 version = 1
-firmware = 'sketch.ino'
-elf = 'build/sketch.elf' # Change based on your compiler setup if using Arduino CLI/PlatformIO
+firmware = ".pio/build/esp32dev/firmware.bin"
+elf = ".pio/build/esp32dev/firmware.elf"
+
