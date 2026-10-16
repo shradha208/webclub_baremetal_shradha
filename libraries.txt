@@ -1,1 +1,0 @@
-SparkFun MAX3010x Pulse and Proximity Sensor Library

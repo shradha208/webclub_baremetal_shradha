@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "author": "Anonymous",
+  "author": "Pulse Monitoring",
   "editor": "wokwi",
   "parts": [
-    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "ppg_sensor", "top": -120, "left": 150, "attrs": {} }
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    }
   ],
-  "connections": [
-    [ "esp:GND.1", "ppg_sensor:GND", "black", [ "v0" ] ],
-    [ "esp:3V3", "ppg_sensor:VCC", "red", [ "v0" ] ],
-    [ "esp:VP", "ppg_sensor:SIG", "green", [ "v0" ] ]
-  ],
+  "connections": [],
   "dependencies": {}
 }
-
