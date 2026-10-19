@@ -1,16 +1,110 @@
+
 {
   "version": 1,
-  "author": "Pulse Monitoring",
+  "author": "Smartwatch Project",
   "editor": "wokwi",
   "parts": [
     {
-      "type": "wokwi-esp32-devkit-v1",
+      "type": "board-esp32-devkit-v1",
       "id": "esp",
       "top": 0,
       "left": 0,
       "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "crown",
+      "top": -70,
+      "left": 270,
+      "attrs": {
+        "color": "black",
+        "label": "Side Crown",
+        "key": "c"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "touch",
+      "top": 70,
+      "left": 270,
+      "attrs": {
+        "color": "blue",
+        "label": "Front Touch"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "green",
+      "top": -100,
+      "left": 420,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "red",
+      "top": -20,
+      "left": 420,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "blue",
+      "top": 60,
+      "left": 420,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rg",
+      "top": -100,
+      "left": 350,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rr",
+      "top": -20,
+      "left": 350,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rb",
+      "top": 60,
+      "left": 350,
+      "attrs": {
+        "value": "220"
+      }
     }
   ],
-  "connections": [],
+  "connections": [
+    ["esp:D18", "crown:1.l", "black", []],
+    ["crown:2.l", "esp:GND.1", "black", []],
+
+    ["esp:D4", "touch:1.l", "blue", []],
+    ["touch:2.l", "esp:GND.1", "black", []],
+
+    ["esp:D25", "rg:1", "green", []],
+    ["rg:2", "green:A", "green", []],
+    ["green:C", "esp:GND.1", "black", []],
+
+    ["esp:D26", "rr:1", "red", []],
+    ["rr:2", "red:A", "red", []],
+    ["red:C", "esp:GND.1", "black", []],
+
+    ["esp:D27", "rb:1", "blue", []],
+    ["rb:2", "blue:A", "blue", []],
+    ["blue:C", "esp:GND.1", "black", []]
+  ],
   "dependencies": {}
 }
